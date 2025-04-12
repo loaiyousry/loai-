@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Image Upload</title>
+    
+    <style>
+        /* خلفية الموقع */
+        body {
+            background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center; /* توسيط المحتوى */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* تنسيق العنوان الرئيسي */
+        h1 {
+            color: #fff; /* لون أبيض */
+            font-size: 36px; /* حجم كبير */
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* ظل لنص أوضح */
+            background: rgba(34, 139, 34, 0.7); /* أخضر شفاف */
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        /* تنسيق التوقيع */
+        h2 {
+            color: #fff;
+            font-size: 18px;
+            background: rgba(139, 69, 19, 0.7); /* بني شفاف */
+            padding: 8px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* تنسيق نموذج الرفع */
+        form {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        /* تنسيق زر الرفع */
+        input[type="file"] {
+            margin: 10px;
+        }
+
+        input[type="submit"] {
+            background: #228B22; /* أخضر */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background: #1E7A1E; /* أخضر غامق عند التحويم */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Upload Plant Image Here</h1>
+    <h2>by Loai</h2>
+
+    <form id="upload-form" action="http://127.0.0.1:5000/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" multiple>
+        <br>
+        <input type="submit" value="Send">
+    </form>
+
+</body>
+</html>
